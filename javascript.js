@@ -21,28 +21,49 @@ Blockly.JavaScript['page_header'] = function(block) {
 };
 
 Blockly.JavaScript['color_blue'] = function(block) {
-
-  return "#3333FF";
+  var colour_blue = block.getFieldValue('blue');
+  // TODO: Assemble JavaScript into code variable.
+  var code = '#3333FF';
+  // TODO: Change ORDER_NONE to the correct strength.
+  return [code, Blockly.JavaScript.ORDER_NONE];
 };
 
 Blockly.JavaScript['color_red'] = function(block) {
-  return "#FF3333";
+  var colour_red = block.getFieldValue('red');
+  // TODO: Assemble JavaScript into code variable.
+  var code = '#FF3333';
+  // TODO: Change ORDER_NONE to the correct strength.
+  return [code, Blockly.JavaScript.ORDER_NONE];
 };
 
 Blockly.JavaScript['color_green'] = function(block) {
-  return "#33FF33";
+  var colour_green = block.getFieldValue('green');
+  // TODO: Assemble JavaScript into code variable.
+  var code = '#33FF33';
+  // TODO: Change ORDER_NONE to the correct strength.
+  return [code, Blockly.JavaScript.ORDER_NONE];
 };
 
 Blockly.JavaScript['color_black'] = function(block) {
-  return "000000";
+  var colour_black = block.getFieldValue('black');
+  // TODO: Assemble JavaScript into code variable.
+  var code = '#000000';
+  // TODO: Change ORDER_NONE to the correct strength.
+  return [code, Blockly.JavaScript.ORDER_NONE];
 };
 
 Blockly.JavaScript['color_white'] = function(block) {
-  return "#FFFFFF";
+  var colour_white = block.getFieldValue('white');
+  // TODO: Assemble JavaScript into code variable.
+  var code = '#FFFFFF';
+  // TODO: Change ORDER_NONE to the correct strength.
+  return [code, Blockly.JavaScript.ORDER_NONE];
 };
 
 Blockly.JavaScript['page_text'] = function(block) {
   var text_text = block.getFieldValue('page_text');
-  
-  return text_text;
+  // TODO: Assemble JavaScript into code variable.
+  var code = text_text;
+  // TODO: Change ORDER_NONE to the correct strength.
+  return [code, Blockly.JavaScript.ORDER_NONE];
 };
