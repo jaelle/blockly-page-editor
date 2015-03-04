@@ -42,5 +42,7 @@ Blockly.JavaScript['color_white'] = function(block) {
 };
 
 Blockly.JavaScript['page_text'] = function(block) {
+  var text_text = block.getFieldValue('page_text');
+  
   return text_text;
 };
