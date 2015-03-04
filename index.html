@@ -2,6 +2,7 @@
 <head>
 	<title>Ugly Page Editor</title>
 	<link rel="stylesheet" type="text/css" href="styles.css" />
+	<script src="interpreter/acorn_interpreter.js"></script>
 	<!-- function that gets called once Blockly frame loads //-->
 	<script type="text/javascript">
 		window.blockly_loaded = function(blockly) {
@@ -10,6 +11,7 @@
 
 		window.run_code = function() {
 			code = window.Blockly.JavaScript.workspaceToCode();
+			console.log(code)
 			var myInterpreter = new Interpreter(code);
 			myInterpreter.run();
 		}
