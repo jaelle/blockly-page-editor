@@ -1,0 +1,30 @@
+<html>
+<head>
+	<title>Ugly Page Editor</title>
+	<link rel="stylesheet" type="text/css" href="styles.css" />
+	<!-- function that gets called once Blockly frame loads //-->
+	<script type="text/javascript">
+		window.blockly_loaded = function(blockly) {
+			return window.Blockly = blockly;
+		}
+
+		window.run_code = function() {
+			code = window.Blockly.JavaScript.workspaceToCode();
+		    console.log(code);
+		    eval(code);
+		}
+	</script>
+</head>
+<body>
+	<h1 id="header">Ugly Page Editor</h1>
+	<div id="blockly_editor">
+		<!-- Blockly will be injected in the iframe below //-->
+		<iframe id="blockly" src="blockly.html" width="100%"></iframe>
+	</div>
+	<p id="description">Blockly is a Visual Programming Editor that allows people to 
+		manipulate programs and code using "code blocks" instead of text.</p>
+	<button id="button_run" onclick="run_code()">
+		Run Code Block
+	</button>
+</body>
+</html>

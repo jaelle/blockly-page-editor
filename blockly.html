@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="blockly/blockly_uncompressed.js"></script>
+    <script src="blockly/generators/javascript.js"></script>
+    <script src="blockly/msg/js/en.js"></script>
+    <script src="javascript.js"></script>
+    <script src="blocks.js"></script>
+    <style>
+      html, body {
+        background-color: #fff;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        height: 100%;
+      }
+      .blocklySvg {
+        height: 100%;
+        width: 100%;
+      }
+    </style>
+    <script>
+      function init() {
+        Blockly.inject(document.body, {toolbox: document.getElementById('toolbox')});
+        // Let the top-level application know that Blockly is ready.
+        window.parent.blockly_loaded(Blockly);
+
+        var rootBlock = Blockly.Block.obtain(Blockly.mainWorkspace, 'page_settings');
+        rootBlock.initSvg();
+        rootBlock.render();
+        rootBlock.setMovable(false);
+        rootBlock.setDeletable(false);
+
+      }
+    </script>
+  </head>
+  <body onload="init()">
+    <xml id="toolbox" style="display: none">
+      <category name="Page Parts">
+        <block type="page_header"></block>
+        <block type="page_text"></block>
+      </category>
+      <category name="Colors">
+        <block type="color_red"></block>
+        <block type="color_green"></block>
+        <block type="color_blue"></block>
+        <block type="color_black"></block>
+        <block type="color_white"></block>
+      </category>
+    </xml>
+  </body>
+</html>
