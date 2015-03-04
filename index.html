@@ -10,8 +10,8 @@
 
 		window.run_code = function() {
 			code = window.Blockly.JavaScript.workspaceToCode();
-		    console.log(code);
-		    eval(code);
+			var myInterpreter = new Interpreter(code);
+			myInterpreter.run();
 		}
 	</script>
 </head>
