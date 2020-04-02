@@ -1,8 +1,21 @@
 # Build a Visual Programming Editor with Blockly
 
-This tutorial will walk you through the steps of creating a web-based visual programming editor from scratch using Blockly. You will learn how to integrate a resizable Blockly interface into a webpage, create custom blocks, and generate some JavaScript.
+This tutorial will walk you through the steps of creating a web-based visual programming editor from scratch using Blockly. You will learn how to integrate a resizable Blockly interface into a webpage, create custom blocks, and generate some JavaScript. You will create a Blockly editor that can modify the look and feel of the current webpage. The user will be able to use blocks to change the site colors and edit the header text.
 
-For this example, you will create a Blockly editor that can modify the look and feel of the current webpage. The user will be able to use blocks to change the site colors and edit the header text.
+See the completed example at: http://jlcreations.com/blockly-page-editor/
+
+## Index
+* [Working Example and Tutorial Files](#working-example-and-tutorial-files)
+* [Get Blockly](#get-blockly)
+* [Start Creating the Page Editor](#start-creating-the-page-editor)
+* [Create Custom Blocks](#create-custom-blocks)
+* [Setup the Toolbox](#setup-the-toolbox)
+* [Default Blocks on the Stage](#default-blocks-on-the-stage)
+* [Test the Blockly Editor](#test-the-blockly-editor)
+* [Write the Javascript Generator](#write-the-javascript-generator)
+* [Test the Generated Javascript](#test-the-generated-javascript)
+* [Further Reading](#further-reading)
+
 
 ## Working Example and Tutorial Files
 
