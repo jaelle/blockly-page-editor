@@ -66,7 +66,7 @@ Once your custom block is created, your screen should look something like the im
 
 Repeat this step for each of the following blocks and continue to copy and paste the generated code templates into /blocks.js and /javascript.js.
 
-<img src="tutorial/images/header_block.png" width="300" alt="Header Block" />
+<img src="tutorial/images/header_block.jpg" width="300" alt="Header Block" />
 
 <img src="tutorial/images/text.png" width="300" alt="Header Block" />
 
