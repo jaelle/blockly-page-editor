@@ -59,5 +59,5 @@ More information about using the Block Factory can be found on the Blockly Devel
 
 Create a custom block to hold our page settings. Make it look like the image below. You will be able to find all required blocks under each of the menu items in the left hand toolbar.
 
-![Page Settings Custom Block](tutorial/images/page_settings.png)
+<img src="tutorial/images/page_settings.png" width="150" alt="Page Settings Example" />
 
