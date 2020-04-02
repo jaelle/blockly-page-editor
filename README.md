@@ -81,11 +81,11 @@ Once all your blocks have been created, you are ready to add them to the Blockly
 
 Find the following lines:
 
-'<xml id=”toolbox” style=”display: none”> </xml>'
+`<xml id=”toolbox” style=”display: none”> </xml>`
 
 Replace these with the categories and blocks you want in your toolbox. One example is:
 
-'<xml id=”toolbox” style=”display: none”>
+`<xml id=”toolbox” style=”display: none”>
   <category name=”Page Parts”>
     <block type=”page_header”></block>
     <block type=”page_text”></block>
@@ -95,7 +95,7 @@ Replace these with the categories and blocks you want in your toolbox. One examp
     <block type=”color_green”></block>
     <block type=”color_blue”></block>
   </category>
-</xml>'
+</xml>`
 
 Read more about the Toolbox on the Blockly Developers site.
 
@@ -105,7 +105,7 @@ For the purpose of our page editor, we want to start by displaying a the page_se
 
 Replace the init() function in /blockly.html:
 
-'function init() {
+`function init() {
   Blockly.inject(document.body, {toolbox: document.getElementById('toolbox')});
   // Let the top-level application know that Blockly is ready.
   window.parent.blockly_loaded(Blockly);
@@ -114,7 +114,7 @@ Replace the init() function in /blockly.html:
   root_block.render();
   root_block.setMovable(false);
   root_block.setDeletable(false);
-}'
+}`
 
 ## Test the Blockly Editor
 
@@ -124,10 +124,10 @@ Navigate to your /index.html file in a browser to see if everything works as ant
 * Depending on your settings, Chrome may not allow you to share data between frames when running this site locally. If you receive an error, try using another browser such as Firefox.
 * If you find you can’t snap together blocks that you need to, ensure that the parent block has the proper value specified for setCheck(). Also check that the child block is returning the proper Output value.
 Example: Both the setCheck and the Output value are “String”
-  'this.appendValueInput("page_paragraph")
-  .setCheck("String")'
+  `this.appendValueInput("page_paragraph")
+  .setCheck("String")`
 
-  'this.setOutput(true, "String");'
+  `this.setOutput(true, "String");`
   
 ## Write the JavaScript Generator
 
@@ -135,11 +135,11 @@ Now that the Blockly interface is complete, we need to tell Blockly what to do w
 
 We already started to create this generator in /javascript.js using the code from the generated Generator stub templates in the Block Factory. When viewing this file, you should see a line in each block that looks like:
 
-'var code = '...';'
+`var code = '...';`
 
 This code variable needs to be replaced with the JavasSript code that is represented by that code block. For example, our page_header custom block needs to set the color and text of the header. The code for this should look like:
 
-'Blockly.JavaScript['page_header'] = function(block) {
+`Blockly.JavaScript['page_header'] = function(block) {
   var value_header_text = Blockly.JavaScript.valueToCode(block, 'header_text', Blockly.JavaScript.ORDER_ATOMIC);
   var value_color = Blockly.JavaScript.valueToCode(block, 'color', Blockly.JavaScript.ORDER_ATOMIC);
 
@@ -147,7 +147,7 @@ This code variable needs to be replaced with the JavasSript code that is represe
   var code = 'document.getElementById("header").innerHTML = "' + value_header_text + '";\n';
   code += 'document.getElementById("header").style.color = "' + value_color + '";\n';
   return code;
-};'
+};`
 
 Do this for the rest of the custom block generator stubs that you pasted into /javascript.js. In the end, it should look something like the code found here:
 https://github.com/jaelle/blockly-page-editor/blob/gh-pages/javascript.js
@@ -158,10 +158,10 @@ Read more about creating custom code generators on the Blockly Developer site.
 
 We are nearly done! The only step left is to include the run function that will handle executing the generated Blockly code. In /index.html, make sure that a run_code() function is included below the init() function.
 
-'window.run_code = function() {
+`window.run_code = function() {
   code = window.Blockly.JavaScript.workspaceToCode();
   eval(code);
-}'
+}`
 
 Now, navigate to /index.html in your browser and have fun editing your page!
 
