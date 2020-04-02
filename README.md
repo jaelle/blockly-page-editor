@@ -15,8 +15,7 @@ https://github.com/jaelle/blockly-page-editor
 ## Get Blockly
 
 Before you get started, make sure to download Blockly. There are several ways to go about this.
-* Download the zip file.
-* Download the TAR ball.
+* Download the [zip file](https://github.com/google/blockly/zipball/master).
 * Clone the project from git.
   `git clone https://github.com/google/blockly.git blockly`
   
@@ -38,7 +37,7 @@ Now it is time to design the page editor. This webpage will be editable by a Blo
 Start by creating the HTML page (/index.html). Make it look something like the code found here:
 https://github.com/jaelle/blockly-page-editor/blob/gh-pages/index.html 
 
-Next, create the HTML page for Blockly (/blockly.html). This will run in the iframe of index.html. More information about creating a Blockly editor in an iframe can be found on the Blockly Developer site. Make sure it looks something like this:
+Next, create the HTML page for Blockly (/blockly.html). This will run in the iframe of index.html. More information about creating a Blockly editor in an iframe can be found on the [Blockly Developer site](https://developers.google.com/blockly/custom-blocks/block-factory). Make sure it looks something like this:
 https://github.com/jaelle/blockly-page-editor/blob/gh-pages/blockly.html
  
 
@@ -67,13 +66,13 @@ Once your custom block is created, your screen should look something like the im
 
 Repeat this step for each of the following blocks and continue to copy and paste the generated code templates into /blocks.js and /javascript.js.
 
-<img src="header_block.png" width="300" alt="Header Block" />
+<img src="tutorial/images/header_block.png" width="300" alt="Header Block" />
 
-<img src="text.png" width="300" alt="Header Block" />
+<img src="tutorial/images/text.png" width="300" alt="Header Block" />
 
 Create as many different color blocks as you feel like making, and continue to add the generated code templates to blocks.js and javascript.js
 
-<img src="color1.png" width="300" alt="Color Block" />
+<img src="tutorial/images/color1.png" width="300" alt="Color Block" />
 
 ## Setup the Toolbox
 
@@ -89,8 +88,8 @@ Replace these with the categories and blocks you want in your toolbox. One examp
 
 ```xml
 <xml id=”toolbox” style=”display: none”>`
-  `<category name=”Page Parts”>`
-    `<block type=”page_header”></block>
+  <category name=”Page Parts”>`
+    <block type=”page_header”></block>
     <block type=”page_text”></block>
  </category>
 <category name=”Color”>
@@ -101,7 +100,7 @@ Replace these with the categories and blocks you want in your toolbox. One examp
 </xml>
 ```
 
-Read more about the Toolbox on the Blockly Developers site.
+Read more about the Toolbox on the [Blockly Developers](https://web.archive.org/web/20161017153920/https://developers.google.com/blockly/custom-blocks/block-factory) site.
 
 ## Default Blocks on the Stage
 
