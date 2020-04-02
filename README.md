@@ -1,4 +1,4 @@
-# blockly-page-editor
+# Build a Visual Programming Editor with Blockly
 
 This tutorial will walk you through the steps of creating a web-based visual programming editor from scratch using Blockly. You will learn how to integrate a resizable Blockly interface into a webpage, create custom blocks, and generate some JavaScript.
 
@@ -46,3 +46,18 @@ Add some styles. An example stylesheet can be found here:
 https://github.com/jaelle/blockly-page-editor/blob/gh-pages/styles.css
 
 Visiting /index.html in the browser should reveal the Blockly editor loaded on the page. Several default blocks are loaded into the Blockly editor.  However, we want to create our own custom blocks for editing the page.
+
+## Create Custom Blocks
+
+Visit the Block Factory demo app in your browser. To view this locally, navigate to: blockly/demos/blockfactory/index.html
+
+Note: When working with the Block Factory, you may receive an error that says “Unable to communicate between frames.” If this occurs, you will need to use another browser, such as Firefox, to run Block Factory locally on your computer. Alternatively, you can also visit the Block Factory online at: https://blockly-demo.appspot.com/static/demos/blockfactory/index.html
+
+Use the Block Factory to design custom blocks. Language templates for a custom block and its associated code generator can be created on this page. The left hand side of the screen contains code blocks for setting options of a new custom block. A preview of the new block displays on the upper right hand side of the screen. Below that is a template for the block’s code and the generated JavaScript.
+
+More information about using the Block Factory can be found on the Blockly Developer site.
+
+Create a custom block to hold our page settings. Make it look like the image below. You will be able to find all required blocks under each of the menu items in the left hand toolbar.
+
+![Page Settings Custom Block](tutorial/images/page_settings.png)
+
