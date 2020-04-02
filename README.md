@@ -75,13 +75,13 @@ Create a custom block to hold our page settings. Make it look like the image bel
 
 Once your custom block is created, your screen should look something like the image below. Copy the code from below Language code and paste it into a file called /blocks.js. Copy the code from below Generator stub and paste it into a file called /javascript.js.
 
-<img src="tutorial/images/page_settings_complete.png" width="600" alt="Page Settings Example Completed" />
+<img src="tutorial/images/page_settings_complete.png" width="800" alt="Page Settings Example Completed" />
 
 Repeat this step for each of the following blocks and continue to copy and paste the generated code templates into /blocks.js and /javascript.js.
 
 <img src="tutorial/images/header_block.jpg" width="300" alt="Header Block" />
 
-<img src="tutorial/images/text.png" width="300" alt="Header Block" />
+<img src="tutorial/images/text.png" width="450" alt="Header Block" />
 
 Create as many different color blocks as you feel like making, and continue to add the generated code templates to blocks.js and javascript.js
 
